@@ -25,12 +25,12 @@ app.get('/api/hello', function (req, res) {
 });
 
 app.get('/api/whoami', function (req, res) {
-  res.json({body: {
+  res.json({
     "ipaddress": req.get('X-Forwarded-For'),
     "language": req.get('Accept-Language'), 
     "software": req.get('User-Agent')
   
-  }});
+  });
 
 });
 
